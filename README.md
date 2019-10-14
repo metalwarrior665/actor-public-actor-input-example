@@ -2,14 +2,14 @@
 
 ### Apify Store Scraper
 
-Apify Store Scraper is an Apify actor for extracting data actors from Apify Store. It allows you to select any filters you neeed and extract detailed information about each actor found.
+Apify Store Scraper is an Apify actor for extracting data about actors from Apify Store. It allows you to set any search filters you need and extract detailed information about each actor found.
 
 ### Input
 
 | Field | Type | Description | Default value
 | ----- | ---- | ----------- | -------------|
-| startUrls | array | List of Request objects that will be deeply crawled. URL can `https://apify.com/store`, any category/search URL or actor detail URL | `{ "url": "https://apify.com/store" }`|
-| maxItems | Maximum number of actor that will be scraped | number | all found |
+| startUrls | array | List of [Request](https://sdk.apify.com/docs/api/request#docsNav) objects that will be deeply crawled. URL can `https://apify.com/store`, any category/search URL or actor detail URL | `{ "url": "https://apify.com/store" }`|
+| maxItems | Maximum number of actors that will be scraped | number | all found |
 | updatePageFunction | string | Function that takes a JQuery handle ($) as argument and returns data that will be added to the default output. More information in [Update page function](#update-page-function) | |
 | proxyConfiguration | object | Proxy settings of the run. Keep the default value unless you know what you are doing | `{ "useApifyProxy": true }`|
 
@@ -27,7 +27,7 @@ Output is stored in a dataset. Each item is an information about an actor. Examp
 }
 ```
 
-### updatePageFunction
+### Update Page Function
 
 You can use this function to update the default output of this actor. This function gets a JQuery handle `$` as an argument so you can choose what data from the page you want to scrape. The output from this will function will get merged with the default output.
 
