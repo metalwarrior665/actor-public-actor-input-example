@@ -15,8 +15,8 @@
             "minimum": 1,
             "description": "Limit of detail/product pages to be scraped"
         },
-        "updatePageFunction": {
-            "title": "Update page function",
+        "extendOutputFunction": {
+            "title": "Extend output function",
             "type": "string",
             "editor": "javascript",
             "description": "A function which result will get merged with the default result",

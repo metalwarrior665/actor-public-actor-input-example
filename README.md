@@ -7,7 +7,7 @@ Apify Store Scraper is an [Apify actor](https://apify.com/actors) for extracting
 - [Input](#input)
 - [Output](#output)
 - [Compute units consumption](#compute-units-consumption)
-- [Update Page Function](#update-page-function)
+- [Extend output function](#extend-output-function)
 
 ### Input
 
@@ -15,7 +15,7 @@ Apify Store Scraper is an [Apify actor](https://apify.com/actors) for extracting
 | ----- | ---- | ----------- | -------------|
 | startUrls | array | List of [Request](https://sdk.apify.com/docs/api/request#docsNav) objects that will be deeply crawled. The URL can be top level like `https://apify.com/store`, any category/search URL or actor detail URL | `[{ "url": "https://apify.com/store" }]`|
 | maxItems | number | Maximum number of actor pages that will be scraped | all found |
-| updatePageFunction | string | Function that takes a JQuery handle ($) as argument and returns data that will be added to the default output. More information in [Update page function](#update-page-function) | |
+| extendOutputFunction | string | Function that takes a JQuery handle ($) as argument and returns data that will be merged with the default output. More information in [Extend output function](#extend-output-function) | |
 | proxyConfiguration | object | Proxy settings of the run. If you have access to Apify proxy, leave the default settings. If not, you can set `{ "useApifyProxy": false" }` to disable proxy usage | `{ "useApifyProxy": true }`|
 
 ### Output
@@ -37,7 +37,7 @@ Keep in mind that it is much more efficient to run one longer scrape (at least o
 
 The average consumption is **1 Compute unit for 1000 actor pages** scraped
 
-### Update Page Function
+### Extend output function
 
 You can use this function to update the default output of this actor. This function gets a JQuery handle `$` as an argument so you can choose what data from the page you want to scrape. The output from this will function will get merged with the default output.
 
