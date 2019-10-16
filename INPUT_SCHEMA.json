@@ -20,7 +20,8 @@
             "type": "string",
             "editor": "javascript",
             "description": "A function which result will get merged with the default result",
-            "prefill": "($) => {\n    const result = {};\n    // Uncomment to add a title to the output\n    // result.title = $('title').text().trim();\n\n    return result;\n}"
+            "prefill": "($) => {\n    const result = {};\n    // Uncomment to add a title to the output\n    // result.title = $('title').text().trim();\n\n    return result;\n}",
+            "sectionCaption": "Advanced options"
         },
         "proxyConfiguration": {
             "title": "Proxy configuration",
