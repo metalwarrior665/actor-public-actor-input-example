@@ -70,4 +70,4 @@ This example will add a new field `modified`, change the `title` field and remov
 ```
 
 ### Epilogue
-Thank you for trying my actor. I will be very glad for a feedback that you can send to my email `lukas@apify.com`. If you find any bug, please create an issue on the [Github page](https://github.com/metalwarrior665/apify-store-scraper).
+Thank you for trying my actor. I will be very glad for a feedback that you can send to my email `lukas@apify.com`. If you find any bug, please create an issue on the [Github page](https://github.com/metalwarrior665/actor-public-actor-input-example/issues).
